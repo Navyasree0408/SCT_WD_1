@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure CSS Fixed Navigation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 2000px; 
+      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); 
+    }
+       nav {
+      position: fixed; 
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      box-sizing: border-box;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.7); 
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); 
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05); 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin-left: 35px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 8px 16px;
+      border-radius: 4px; 
+      transition: all 0.3s ease;
+    }
+    .nav-links a:hover {
+      background-color: #007bff;
+      color: #ffffff; 
+      box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #111;
+      letter-spacing: 1px;
+    }
+    .content {
+      padding: 120px 50px 50px;
+      text-align: center;
+    }
+    .content-box {
+      background-color: #ff7675;
+      color: white;
+      padding: 40px;
+      margin: 20px auto;
+      border-radius: 8px;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Structure -->
+  <nav>
+    <div class="logo">MyLogo</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <h1>Scroll down slowly!</h1>
+    <p>Watch how the red boxes blur underneath the navigation bar as they scroll past.</p>
+    
+    <div class="content-box">Content Block 1</div>
+    <div class="content-box" style="background-color: #74b9ff;">Content Block 2</div>
+    <div class="content-box" style="background-color: #55efc4;">Content Block 3</div>
+  </div>
+
+</body>
+</html>
